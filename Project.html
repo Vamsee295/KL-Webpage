@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KL ERP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: black;
+            color: white;
+            width: 20%;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 15px;
+            border-bottom: 1px solid gray;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar ul li i {
+            margin-right: 10px;
+        }
+
+        .sidebar ul li:hover {
+            background-color: gray;
+            cursor: pointer;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main .cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: #f0f0f0;
+            padding: 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+           
+        }
+
+        .card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .floating-note {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            font-weight: 50px;
+            border-radius: 8px;
+            font-weight: bold;
+            z-index: 1000;
+            white-space: nowrap;
+            animation: float-left-right 20s linear infinite;
+        }
+
+        @keyframes float-left-right {
+            0% {
+                left: -100%;
+            }
+            50% {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        footer {
+            background-color: #8B0000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+        } 
+
+        .About us {
+            cursor: pointer;
+        }
+
+        .Contact  {
+            cursor: pointer;
+        }
+
+        .Login {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="Images/KL_University_logo.svg.png" alt="KL University Logo" style="height: 45px; width: 200px;">
+        </div>
+        <div>
+            <a class="Login" href="#">Login</a>
+            <a class="About us" href="#">About us</a>
+            <a class="Contact" href="#">Contact us</a>
+        </div>
+    </header>
+
+    <div class="floating-note">
+        NOTE: Please clear your browser cache to display MENU properly *
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul> 
+                <li><i class="fas fa-home"></i> HOME</li>
+                <li><i class="fas fa-user-graduate"></i> ACADEMIC REGISTRATION</li>
+                <li><i class="fas fa-calendar-check"></i> ATTENDANCE REGISTER</li>
+                <li><i class="fas fa-briefcase"></i> CAREER CHOICE</li>
+                <li><i class="fas fa-book"></i> COURSES</li>
+                <li><i class="fas fa-user-circle"></i> COUNSELLING DIARY</li>
+                <li><i class="fas fa-users"></i> CLUBS/ACTIVITIES</li>
+                <li><i class="fas fa-pencil-alt"></i> EXAM SECTION</li>
+                <li><i class="fas fa-comment-dots"></i> FEEDBACK</li>
+                <li><i class="fas fa-credit-card"></i> FEE PAYMENT</li>
+                <li><i class="fas fa-bed"></i> HOSTEL MANAGEMENT</li>
+                <li><i class="fas fa-ticket-alt"></i> HALL TICKET</li>
+                <li><i class="fas fa-tools"></i> INFRASTRUCTURE RELATED</li>
+                <li><i class="fas fa-book-reader"></i> LIBRARY</li>
+                <li><i class="fas fa-chart-line"></i> MY CGPA</li>
+                <li><i class="fas fa-code-branch"></i> NODE</li>
+                <li><i class="fas fa-user-circle"></i> PROFILE</li>
+            </ul>
+        </div>
+        
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <img src="Images/jouranl.png" alt="Journals Icon">
+                    <span>Journals & Conferences</span>
+                    <span>1</span>
+                    
+                </div>
+                <div class="card">
+                    <img src="Images/awards.png" alt="Awards Icon">
+                    <span>Awards & Recognitions</span>
+                    <span>3</span>
+                </div>
+                <div class="card">
+                    <img src="Images/guest-lectures.png" alt="Lectures Icon">
+                    <span>Workshops, Seminars & Guest Lectures</span>
+                    <span>5</span>
+                </div>
+                <div class="card">
+                    <img src="Images/projects.png" alt="Projects Icon">
+                    <span>Projects & Consultancy</span>
+                    <span>7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p> THIS IS THE @KLU COPYRIGHT FORM DO NOT USE ANYONE </p>
+        <i class="fab fa-facebook-square"></i>&nbsp;
+        <i class="fab fa-twitter-square"></i>&nbsp;
+        <i class="fab fa-instagram-square"></i>&nbsp;
+        <i class="fab fa-Email-square"></i>&nbsp;
+        
+    </footer>
+</body>
+</html>
